@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background: blue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div id="msg">Clique em mim!</div>
+    <div name="obs">Observação aqui!</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var d1 = window.document.getElementById('msg')
+        var d2 = window.document.getElementsByName('obs')[0]
+        window.document.writeln(p1.innerText+'<br />')
+        window.document.writeln(p2.innerText) // Texto sem formatação/tags html
+        window.document.writeln(p2.innerHTML) // Texto com as tags html
+
+        corpo.style.background = 'grey'
+        p1.style.color = 'red'
+        d1.style.background = 'green'
+        d1.innerText = 'Aguarde...'
+        d2.style.background = 'black'
+        d2.innerText = 'Estamos aguardando...'
+
+        var dmsg = document.querySelector('div#msg')
+        dmsg.style.background = 'orange'
+
+        // window.document.writeln('Olá mundo!<br />')
+        // window.document.writeln(window.navigator.appName)
+        // window.document.writeln(window.document.URL)
+
+    </script>
+</body>
+</html>
